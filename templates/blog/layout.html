@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CyberWaste {% block title %}Crazy dutch programmer{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+
+<header>
+    <h1>CyberWaste</h1>
+</header>
+
+<aside>
+    <ul>
+    {% for category in categories %}
+        <li><a href="/section/{{ category.slug }}.html">{{ category.title }}</a></li>
+    {% endfor %}
+    </ul>
+</aside>
+
+<section>
+{% block content %}
+{% endblock %}
+</section>
+
+<footer>
+    Copyright &copy; 1984 - {% now "Y" %} Everybody except Governments and Cooperation's.
+</footer>
+
+</body>
+</html>
