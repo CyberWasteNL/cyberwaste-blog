@@ -8,7 +8,7 @@
         <h1><a href="/article/{{ article.slug }}.html">{{ article.title }}</a></h1>
         <p><time pubdate="pubdate">{{ article.created }}</time> by: CyberWaste</p>
         <p><b>{{ article.intro }}</b></p>
-        <p>{{ article.text|markdown }}</p>
+        <div>{{ article.text|markdown }}</div>
     </article>
     {% empty %}
         <article>

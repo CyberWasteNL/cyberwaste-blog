@@ -4,6 +4,7 @@
 <head>
     <title>CyberWaste {% block title %}Crazy dutch programmer{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/monokai.min.css">
 </head>
 <body>
 
@@ -11,13 +12,13 @@
     <h1>CyberWaste</h1>
 </header>
 
-<aside>
+<nav>
     <ul>
     {% for category in categories %}
         <li><a href="/section/{{ category.slug }}.html">{{ category.title }}</a></li>
     {% endfor %}
     </ul>
-</aside>
+</nav>
 
 <section>
 {% block content %}
@@ -28,5 +29,6 @@
     Copyright &copy; 1984 - {% now "Y" %} Everybody except Governments and Cooperation's.
 </footer>
 
+<script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
 </body>
 </html>
