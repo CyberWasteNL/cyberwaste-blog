@@ -1,3 +1,12 @@
 {% extends 'blog/layout.html' %}
 {% load markdown_deux_tags staticfiles %}
 
+{% block content %}
+    test
+    <article>
+        <h1>{{ article.title }}</h1>
+        <p><time pubdate="pubdate">{{ article.created }}</time> by: CyberWaste</p>
+        <p><b>{{ article.intro }}</b></p>
+        <div>{{ article.text|markdown }}</div>
+    </article>
+{% endblock %}

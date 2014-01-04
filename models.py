@@ -30,3 +30,8 @@ class Article(models.Model):
     class Meta:
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
+
+    @models.permalink
+    def get_absolute_url(self):
+        from django.core.urlresolvers import reverse
+        return reverse('article', kwargs={'slug': self.slug})

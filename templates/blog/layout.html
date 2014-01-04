@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>CyberWaste {% block title %}Crazy dutch programmer{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
     <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/monokai.min.css">
 </head>
@@ -14,6 +15,7 @@
 
 <nav>
     <ul>
+        <li><a href="/">Home</a></li>
     {% for category in categories %}
         <li><a href="/section/{{ category.slug }}.html">{{ category.title }}</a></li>
     {% endfor %}
